@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
-  Text,
+  TouchableOpacity,
   View,
   Image
 } from 'react-native';
@@ -18,11 +18,17 @@ export default class app6 extends Component {
       <View style={generalView}>
         <View style={logoStyle}>
           <Image source={logo}/>
-          <Image source={botao_jogar}/>
+          <TouchableOpacity>
+            <Image source={botao_jogar}/>
+          </TouchableOpacity>
         </View>
         <View style={jogarStyle}>
-        <Image source={sobre_jogo}/>
-        <Image source={outros_jogos}/>
+        <TouchableOpacity>
+          <Image source={sobre_jogo}/>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Image source={outros_jogos}/>
+        </TouchableOpacity>
         </View>
       </View>
     );
