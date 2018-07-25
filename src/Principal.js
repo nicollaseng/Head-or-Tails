@@ -13,20 +13,23 @@ const sobre_jogo = require('../img/sobre_jogo.png')
 const outros_jogos = require('../img/outros_jogos.png')
 
 export default class Principal extends Component {
+  static navigationOptions = {
+    header: null
+  }
   render() {
     return (
       <View style={generalView}>
         <View style={logoStyle}>
           <Image source={logo}/>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('resultado')}>
             <Image source={botao_jogar}/>
           </TouchableOpacity>
         </View>
         <View style={jogarStyle}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('sobre')}>
           <Image source={sobre_jogo}/>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('outro')}>
           <Image source={outros_jogos}/>
         </TouchableOpacity>
         </View>

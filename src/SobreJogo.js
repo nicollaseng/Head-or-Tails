@@ -5,12 +5,16 @@ import {
 } from 'react-native';
 
 export default class SobreJogo extends Component {
+  static navigationOptions = {
+    header: null
+  }
   render() {
-    return 
+    return (
       <View style={generalView}>
         <Text>Aqui você encontra sobre outros jogos</Text>
       </View>
-    );
+    )
+    
   }
 }
 
